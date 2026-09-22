@@ -1,43 +1,52 @@
 #if 0
 #include <Arduino.h>
  
-#define NUM_LEDS 14  // PC0 bis PC13
-int ledPins[NUM_LEDS] = {
-    PC0, PC1, PC2, PC3, PC4, PC5, PC6,
-    PC7, PC8, PC9, PC10, PC11, PC12, PC13
-};
- 
 int pos = 0;
 int direction = 1;
  
 void setup() {
     Serial.begin(115200);
- 
-    for (int i = 0; i < NUM_LEDS; i++) {
-        pinMode(ledPins[i], OUTPUT);
-        digitalWrite(ledPins[i], LOW);
-    }
+    pinMode(PC0, OUTPUT);
+    pinMode(PC1, OUTPUT);
+    pinMode(PC2, OUTPUT);
+    pinMode(PC3, OUTPUT);
+    pinMode(PC4, OUTPUT);
+    pinMode(PC5, OUTPUT);
+    pinMode(PC6, OUTPUT);
+    pinMode(PC7, OUTPUT);
+    /*for (int i = PC0; i < PC7; i++) {
+        pinMode(i, OUTPUT);
+        digitalWrite(i, LOW);
+    }*/
+}
+void setLeds(int led0, int led1, int led2, int led3, int led4, int led5, int led6, int led7) {
+    digitalWrite(PC0, led0);
+    digitalWrite(PC1, led1);
+    digitalWrite(PC2, led2);
+    digitalWrite(PC3, led3);
+    digitalWrite(PC4, led4);
+    digitalWrite(PC5, led5);
+    digitalWrite(PC6, led6);
+    digitalWrite(PC7, led7);
 }
  
 void loop() {
-    // alle LEDs aus
-    for (int i = 0; i < NUM_LEDS; i++) {
-        digitalWrite(ledPins[i], LOW);
-    }
- 
-    // aktuelle LED an
-    digitalWrite(ledPins[pos], HIGH);
- 
-    delay(150);
- 
-    // Richtung wechseln an den Enden
-    if (pos == NUM_LEDS - 1) {
-        direction = -1;
-    } else if (pos == 0) {
-        direction = 1;
-    }
- 
-    pos += direction;
+    setLeds(1, 0, 0, 0, 0, 0, 0, 0);
+    delay(100);
+    setLeds(0, 1, 0, 0, 0, 0, 0, 0);
+    delay(100);
+    setLeds(0, 0, 1, 0, 0, 0, 0, 0);
+    delay(100);
+    setLeds(0, 0, 0, 1, 0, 0, 0, 0);
+    delay(100);
+    setLeds(0, 0, 0, 0, 1, 0, 0, 0);
+    delay(100);
+    setLeds(0, 0, 0, 0, 0, 1, 0, 0);
+    delay(100);
+    setLeds(0, 0, 0, 0, 0, 0, 1, 0);
+    delay(100);
+    setLeds(0, 0, 0, 0, 0, 0, 0, 1);
+    delay(100);
 }
 
 #endif
