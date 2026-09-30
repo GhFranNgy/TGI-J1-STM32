@@ -1,17 +1,15 @@
-#if 0
+#if 0   // preprocessor switch 0 = don't compile, 1 = compile 
 #include <Arduino.h>
+#define BOARD_LED PA5 // grüne LED auf dem Board
 
-void setup() {
-  // put your setup code here, to run once:
-  pinMode(PC0, OUTPUT);
+void setup(){   // Einmalige Ausführung => Initialisierungen...
+    pinMode(BOARD_LED, OUTPUT);  // Pin als Ausgang schalten
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(PC0, HIGH);
-  delay(1000);
-  digitalWrite(PC0, LOW);
-  delay(1000);
-}
-
+void loop(){
+    digitalWrite(PA5, 1);// High ausgeben
+    delay(200);                   // warte 200ms
+    digitalWrite(PA5, 0); // Low ausgeben
+    delay(200);                   // warte 200ms
+} 
 #endif

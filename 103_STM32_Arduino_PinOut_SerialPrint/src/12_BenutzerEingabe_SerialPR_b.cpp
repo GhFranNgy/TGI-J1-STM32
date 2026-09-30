@@ -17,19 +17,19 @@ void loop() {
             case 'A':
             case 'a':
                 Serial.println("Auswahl A: Sie haben A gewählt");
-            break;
+                break;
             case 'B':
             case 'b':
                 Serial.println("Auswahl B: Sie haben B gewählt");
-            break;
+                break;
             case 'C':
             case 'c':
                 Serial.println("Auswahl C: Sie haben C gewählt");
-            break;
+                break;
             case 'D':
             case 'd':
                 Serial.println("Auswahl D: Sie haben D gewählt");
-            break;
+                break;
         }
     }
 }

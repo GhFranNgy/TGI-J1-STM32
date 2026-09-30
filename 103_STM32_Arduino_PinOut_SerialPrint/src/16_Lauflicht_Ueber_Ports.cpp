@@ -1,4 +1,4 @@
-#if 1
+#if 0
 #include <Arduino.h>
 
 #define NUM_LEDS 46
@@ -20,6 +20,19 @@ void setup() {
 void loop() {
     for(int i = 0; i < NUM_LEDS; i++) {
         digitalWrite(ledPins[i], HIGH);
+        delay(10);
+        digitalWrite(ledPins[i], LOW);
+        delay(10);
+    }
+    for(int i = NUM_LEDS; i > 0; i--) {
+        digitalWrite(ledPins[i], HIGH);
+        delay(10);
+        digitalWrite(ledPins[i], LOW);
+        delay(10);
+    }
+
+    /*for(int i = 0; i < NUM_LEDS; i++) {
+        digitalWrite(ledPins[i], HIGH);
         if (i < NUM_LEDS) {
             digitalWrite(ledPins[i+1], HIGH);
         }
@@ -37,7 +50,7 @@ void loop() {
 
         digitalWrite(ledPins[i], LOW);
         delay(10);
-    }
+    }*/
 }
 
 #endif

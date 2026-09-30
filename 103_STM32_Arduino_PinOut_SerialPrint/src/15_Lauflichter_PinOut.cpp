@@ -1,4 +1,4 @@
-#if 0
+#if 1
 #include <Arduino.h>
  
 int pos = 0;
@@ -46,6 +46,18 @@ void loop() {
     setLeds(0, 0, 0, 0, 0, 0, 1, 0);
     delay(100);
     setLeds(0, 0, 0, 0, 0, 0, 0, 1);
+    delay(100);
+    setLeds(0, 0, 0, 0, 0, 0, 1, 0);
+    delay(100);
+    setLeds(0, 0, 0, 0, 0, 1, 0, 0);
+    delay(100);
+    setLeds(0, 0, 0, 0, 1, 0, 0, 0);
+    delay(100);
+    setLeds(0, 0, 0, 1, 0, 0, 0, 0);
+    delay(100);
+    setLeds(0, 0, 1, 0, 0, 0, 0, 0);
+    delay(100);
+    setLeds(0, 1, 0, 0, 0, 0, 0, 0);
     delay(100);
 }
 
