@@ -30,6 +30,9 @@ void loop() {
             case 'd':
                 Serial.println("Auswahl D: Sie haben D gewählt");
                 break;
+            default:
+                Serial.print("Falsche Auswahl, Sie haben");
+                Serial.print(inputChar + " getippt.");
         }
     }
 }

@@ -28,6 +28,11 @@ void loop() {
         else if(inputChar == 'D' || inputChar == 'd') {
             Serial.println("Auswahl D: Sie haben D gewählt");
         }
+
+        else{
+            Serial.print("Falsche Auswahl, Sie haben");
+            Serial.print(inputChar + " getippt.");
+        }
     }
 }
 

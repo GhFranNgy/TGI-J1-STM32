@@ -34,5 +34,9 @@ void loop() {
     } else if (input == 'D') {
         digitalWrite(PC3, HIGH);
     } 
+    else{
+        Serial.print("Falsche Auswahl, Sie haben");
+        Serial.print(inputChar + " getippt.");
+    }
 }
 #endif
