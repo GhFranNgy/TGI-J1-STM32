@@ -1,4 +1,4 @@
-#if 1
+#if 0
 #include <Arduino.h>
 
 // Tonfrequenzen in Hz (4. und 5. Oktave)
