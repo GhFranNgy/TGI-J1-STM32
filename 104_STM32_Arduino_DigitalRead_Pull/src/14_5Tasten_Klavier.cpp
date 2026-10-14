@@ -1,4 +1,4 @@
-#if 0
+#if 1
 #include <Arduino.h>
 
 const int f_toneC4 = 262; // C4
