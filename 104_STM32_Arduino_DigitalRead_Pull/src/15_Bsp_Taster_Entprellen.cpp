@@ -1,5 +1,14 @@
 #if 1
 #include <Arduino.h>
+// * Taster-Entprellung für den STM32L152RE mit Arduino Framework
+// * Für Taster TB0_P (active high mit internem Pull-Down)
+// Pin-Definition für den Taster TB0_P
+const int tB0_P = PB0; // Bitte durch den tatsächlichen Pin ersetzen, an dem TB0_P angeschlossen ist
+// Parameter für die Entprellung
+const unsigned long ENTPRELL_ZEIT = 50; // Entprellungszeit in Millisekunden
+// Variablen für den Tasterstatus
+volatile bool tasterStatus = false; // Aktueller Status des Tasters (entprellt)
+volatile bool letzterStatus = false; // Letzter Status des Tasters
 volatile unsigned long letzteAenderung = 0; // Zeitpunkt der letzten Änderung
 void setup() {
     // Serielle Kommunikation initialisieren
