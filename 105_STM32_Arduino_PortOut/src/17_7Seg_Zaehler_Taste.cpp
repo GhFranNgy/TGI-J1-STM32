@@ -1,4 +1,4 @@
-#if 1
+#if 0
 #include <Arduino.h>
 
 #define LED_PORTC GPIOC
@@ -37,12 +37,12 @@ void loop() {
     if(pressed) {
         for (int i = 0; i < 10; i++) {
             ausgebenEiner(i);
-            delay(1000);
+            delay(200);
         }
     } else {
         for (int i = 9; i >= 0; i--) {
             ausgebenEiner(i);
-            delay(1000);
+            delay(200);
         }
     }
     

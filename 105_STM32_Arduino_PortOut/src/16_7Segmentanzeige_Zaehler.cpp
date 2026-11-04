@@ -13,7 +13,8 @@ int bcd_7seg[] = {
     ~0x7D, 
     ~0x07, 
     ~0x7F,
-    ~0x6F};
+    ~0x6F
+};
 
 void ausgebenEiner(int zahl) {LED_PORTC -> ODR = bcd_7seg[zahl];}
 
