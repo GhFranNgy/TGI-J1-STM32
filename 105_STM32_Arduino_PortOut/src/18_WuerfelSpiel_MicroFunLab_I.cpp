@@ -1,4 +1,4 @@
-#if 1
+#if 0
 #include <Arduino.h>
 
 #define LED_PORTB GPIOB
@@ -48,12 +48,12 @@ void setup() {
 }
 
 void loop() {
+    LED_PORTB->ODR = 0x00000000;
+
     int d1Rand = random(0, 6);
     int d2Rand = random(0, 6);
     int d3Rand = random(0, 6);
     int d4Rand = random(0, 6);
-
-    LED_PORTB->ODR = 0;
 
     LED_PORTB->ODR |= dice1[d1Rand];
     LED_PORTB->ODR |= dice2[d2Rand];
