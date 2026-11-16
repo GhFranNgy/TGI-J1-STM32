@@ -1,4 +1,4 @@
-#if 1
+#if 0
 #include <Arduino.h>
 
 #define LED_PORTC GPIOC
@@ -44,10 +44,10 @@ void loop() {
         int einer = zahl % 10;
 
         for (int i = 0; i < 50; i++) {
-            zeigeZiffer(zehner, 1);
+            zeigeZiffer(zehner, 0);
             delay(5);
 
-            zeigeZiffer(einer, 0);
+            zeigeZiffer(einer, 1);
             delay(5);
         }
     }
