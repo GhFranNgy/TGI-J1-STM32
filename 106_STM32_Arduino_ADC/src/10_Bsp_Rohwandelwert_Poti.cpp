@@ -4,7 +4,7 @@
 const int potiPA0_P = PA0;
 
 void setup() {
-    Serial.begin(9600); 
+    Serial.begin(115200); 
     analogReadResolution(12); // ADC mit 12 Bit Auflösung
 }
 
